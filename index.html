@@ -8,163 +8,185 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<title>Luftrom – Kan jeg fly her?</title>
+<meta name="description" content="Luftrom viser Luftfartstilsynets offisielle dronesoner på Kartverkets kart, med terrenghøyde, bakkevind og soltider for punktet du sjekker. iOS-app for dronepiloter i Norge.">
 <meta property="og:title" content="Luftrom – Kan jeg fly her?">
 <meta property="og:description" content="Offisielle dronesoner, terrenghøyde, bakkevind og soltider for punktet du sjekker. iOS-app for dronepiloter i Norge.">
-<meta property="og:image" content="https://r33hab.github.io/luftrom-site/assets/verdict-nb.jpg">
+<meta property="og:image" content="https://r33hab.github.io/luftrom-site/assets/map-nb.jpg">
 <meta property="og:url" content="https://r33hab.github.io/luftrom-site/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://r33hab.github.io/luftrom-site/">
-<link rel="stylesheet" href="styles.css">
-<title>Luftrom – Kan jeg fly her?</title>
-<meta name="description" content="Luftrom viser Luftfartstilsynets offisielle dronesoner på Kartverkets kart, med terrenghøyde, bakkevind og soltider for punktet du sjekker. iOS-app for dronepiloter i Norge.">
 </head>
 <body>
-<header class="wrap top">
-  <a class="brand" href="./"><img src="assets/icon.png" alt="" width="34" height="34"><span>Luftrom</span></a>
-  <nav aria-label="Meny">
-    <a href="privacy-policy" data-lang="nb">Personvern</a>
-    <a href="privacy-policy" data-lang="en">Privacy</a>
-    <div class="lang" role="group" aria-label="Språk / Language">
-      <button type="button" data-set="nb" aria-pressed="true" lang="nb">Norsk</button>
-      <button type="button" data-set="en" aria-pressed="false" lang="en">English</button>
-    </div>
-  </nav>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon.png" alt="" width="34" height="34"><span>Luftrom</span></a>
+    <nav aria-label="Meny">
+      <a href="privacy-policy" data-lang="nb">Personvern</a>
+      <a href="privacy-policy" data-lang="en">Privacy</a>
+      <div class="lang" role="group" aria-label="Språk / Language">
+        <button type="button" data-set="nb" aria-pressed="true" lang="nb">Norsk</button>
+        <button type="button" data-set="en" aria-pressed="false" lang="en">English</button>
+      </div>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap">
-  <section class="hero" style="border-top:0">
+<main>
+  <section class="hero wrap">
     <div class="copy">
-      <h1 data-lang="nb">Kan jeg fly her?</h1>
-      <h1 data-lang="en">Can I fly here?</h1>
-      <p class="lede" data-lang="nb">Luftrom viser Luftfartstilsynets offisielle dronesoner på Kartverkets kart, og gir deg ett samlet svar for punktet du sjekker: soner, terrenghøyde, bakkevind og soltider.</p>
-      <p class="lede" data-lang="en">Luftrom shows Norway's official drone zones on Kartverket's maps and gives you one answer for the spot you check: zones, terrain height, ground wind and sun times.</p>
-      <p data-lang="nb">For iPhone. Sonene og vurderingen fungerer uten nett.</p>
-      <p data-lang="en">For iPhone. Zones and the verdict work offline.</p>
+      <h1 class="h1" data-lang="nb"><span class="w" style="--i:0">Kan</span> <span class="w" style="--i:1">jeg</span> <span class="w" style="--i:2">fly</span> <span class="w" style="--i:3">her?</span></h1>
+      <h1 class="h1" data-lang="en"><span class="w" style="--i:0">Can</span> <span class="w" style="--i:1">I</span> <span class="w" style="--i:2">fly</span> <span class="w" style="--i:3">here?</span></h1>
+      <p class="lede" data-lang="nb">Velg et punkt på kartet. Luftrom svarer med Luftfartstilsynets offisielle soner, terrenghøyden, bakkevinden og soltidene, i ett trykk.</p>
+      <p class="lede" data-lang="en">Pick a spot on the map. Luftrom answers with the official zones, the terrain height, the ground wind and the sun times, in one tap.</p>
+      <p class="sub" data-lang="nb">For iPhone. Sonene og vurderingen fungerer uten nett.</p>
+      <p class="sub" data-lang="en">For iPhone. Zones and the verdict work offline.</p>
       <div class="actions">
         <span class="pill soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.9-.8-3.1-.8C6.6 7.4 4 9.4 4 13.1c0 1.2.2 2.4.7 3.6.6 1.6 2.6 5.4 4.7 5.3 1.1 0 1.9-.8 3.3-.8s2.1.8 3.4.8c2.1 0 3.9-3.5 4.5-5.1-2.8-1.3-4.2-2.6-4.2-4.3zM13.6 5.6c1.1-1.3.9-2.6.9-3-.9 0-2 .6-2.6 1.3-.6.7-1.1 1.8-.9 2.9 1 .1 2-.5 2.6-1.2z"/></svg><span data-lang="nb">Kommer på App Store</span><span data-lang="en">Coming to the App Store</span></span>
         <a href="mailto:lersveenk@gmail.com" data-lang="nb">Skriv til oss</a>
         <a href="mailto:lersveenk@gmail.com" data-lang="en">Write to us</a>
       </div>
     </div>
-    <div class="stage" aria-hidden="true">
-      <svg class="rings" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice">
-        <circle cx="300" cy="300" r="290" stroke-width="2" opacity="0.14"/>
-        <circle cx="300" cy="300" r="236" stroke-width="2" opacity="0.22"/>
-        <circle cx="300" cy="300" r="182" stroke-width="2.5" opacity="0.32"/>
+    <div class="stage">
+      <svg class="rings" viewBox="0 0 600 600" aria-hidden="true">
+        <circle cx="300" cy="300" r="290"/><circle cx="300" cy="300" r="290"/><circle cx="300" cy="300" r="290"/>
       </svg>
-      <div class="phone">
-        <img src="assets/verdict-nb.jpg" width="644" height="1400" alt="" data-lang="nb">
-        <img src="assets/verdict-en.jpg" width="644" height="1400" alt="" data-lang="en">
+      <div class="phone" aria-hidden="true">
+        <img class="layer map" src="assets/map-nb.jpg" width="660" height="1434" alt="" data-lang="nb">
+        <img class="layer map" src="assets/map-en.jpg" width="660" height="1434" alt="" data-lang="en">
+        <div class="reticle"></div>
+        <img class="layer sheet" src="assets/sheet-nb.png" width="660" height="784" alt="" data-lang="nb">
+        <img class="layer sheet" src="assets/sheet-en.png" width="660" height="784" alt="" data-lang="en">
       </div>
+      <button class="replay" type="button"><span data-lang="nb">Spill av igjen</span><span data-lang="en">Play again</span></button>
     </div>
   </section>
 
-  <section id="slik">
-    <h2 data-lang="nb">Slik fungerer det</h2>
-    <h2 data-lang="en">How it works</h2>
-    <div class="steps">
-      <div class="step">
-        <h3 data-lang="nb">Finn stedet</h3><h3 data-lang="en">Find the spot</h3>
-        <p data-lang="nb">Søk etter et stedsnavn, eller trykk på posisjonsknappen for å sentrere kartet der du står.</p>
-        <p data-lang="en">Search for a place name, or tap the location button to centre the map where you stand.</p>
+  <svg class="contours" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 96 C 120 70, 200 110, 320 84 S 520 40, 640 70 S 860 118, 980 88 S 1140 56, 1200 74"/>
+  <path d="M0 72 C 140 50, 230 92, 350 66 S 540 22, 660 52 S 880 100, 1000 70 S 1150 40, 1200 56"/>
+  <path d="M0 50 C 160 32, 260 74, 380 48 S 560 6, 680 36 S 900 82, 1020 52 S 1160 24, 1200 40"/>
+  <path d="M0 30 C 180 14, 290 56, 410 30 S 590 -8, 710 20 S 920 64, 1040 34 S 1170 8, 1200 24"/>
+</svg>
+
+  <section class="band" id="slik">
+    <div class="wrap">
+      <h2 class="reveal" data-lang="nb">Slik fungerer det</h2>
+      <h2 class="reveal" data-lang="en">How it works</h2>
+      <div class="how-grid">
+        <div class="steps">
+          <div class="gauge" aria-hidden="true"><div class="rail"></div><div class="fill"></div><span class="tick t120">120 m</span><span class="tick t60">60 m</span><span class="tick t0">0 m</span><span class="marker">0 m</span></div>
+          <article class="step reveal" data-state="map">
+            <h3 data-lang="nb">Finn stedet</h3><h3 data-lang="en">Find the spot</h3>
+            <p data-lang="nb">Søk etter et stedsnavn, eller trykk på posisjonsknappen så kartet sentreres der du står. Sonene ligger allerede på kartet, i samme farger som i tegnforklaringen.</p>
+            <p data-lang="en">Search for a place name, or tap the location button so the map centres where you stand. The zones are already on the map, in the same colours as the legend.</p>
+            <div class="inline-shot"><img src="assets/map-nb.jpg" alt="" data-lang="nb"><img src="assets/map-en.jpg" alt="" data-lang="en"></div>
+          </article>
+          <article class="step reveal" data-state="sheet">
+            <h3 data-lang="nb">Sjekk punktet</h3><h3 data-lang="en">Check the point</h3>
+            <p data-lang="nb">Hold inne på kartet, eller trykk «Sjekk her» for punktet i midten. Svaret kommer opp med en gang: hvilke soner punktet ligger i, om du trenger tillatelse, terrenghøyden og 120-metersgrensen, vind og vindkast time for time, og soloppgang og solnedgang.</p>
+            <p data-lang="en">Long-press the map, or tap "Check here" for the centre point. The answer comes up at once: which zones the point lies in, whether you need permission, the terrain height and the 120 m ceiling, wind and gusts hour by hour, and sunrise and sunset.</p>
+            <div class="inline-shot"><img src="assets/details-nb.jpg" alt="" data-lang="nb"><img src="assets/details-en.jpg" alt="" data-lang="en"></div>
+          </article>
+          <article class="step reveal" data-state="zone">
+            <h3 data-lang="nb">Les vilkårene</h3><h3 data-lang="en">Read the conditions</h3>
+            <p data-lang="nb">Trykk på en sone for å se hva den er, hvem som har ansvaret, og hva du må gjøre, med lenke og telefonnummer til myndigheten. Appen lenker deg videre til NOTAM-oversikten og til tårnklarering der det kreves.</p>
+            <p data-lang="en">Tap a zone to see what it is, who is responsible and what you must do, with a link and phone number for the authority. The app links you onward to the NOTAM briefing and to tower clearance where required.</p>
+            <div class="inline-shot"><img src="assets/zone-nb.jpg" alt="" data-lang="nb"><img src="assets/zone-en.jpg" alt="" data-lang="en"></div>
+          </article>
+        </div>
+        <div class="sticky" aria-hidden="true">
+          <div class="phone">
+            <img data-state="map" class="on" src="assets/map-nb.jpg" alt="" data-lang="nb"><img data-state="map" class="on" src="assets/map-en.jpg" alt="" data-lang="en">
+            <img data-state="sheet" src="assets/details-nb.jpg" alt="" data-lang="nb"><img data-state="sheet" src="assets/details-en.jpg" alt="" data-lang="en">
+            <img data-state="zone" src="assets/zone-nb.jpg" alt="" data-lang="nb"><img data-state="zone" src="assets/zone-en.jpg" alt="" data-lang="en">
+          </div>
+        </div>
       </div>
-      <div class="step">
-        <h3 data-lang="nb">Sjekk punktet</h3><h3 data-lang="en">Check the point</h3>
-        <p data-lang="nb">Hold inne på kartet, eller trykk «Sjekk her» for punktet i midten. Trykk på en sone for å lese hva som gjelder der.</p>
-        <p data-lang="en">Long-press the map, or tap "Check here" for the centre point. Tap any zone to read what applies there.</p>
-      </div>
-      <div class="step">
-        <h3 data-lang="nb">Les svaret</h3><h3 data-lang="en">Read the answer</h3>
-        <p data-lang="nb">Hvilke soner punktet ligger i, om du trenger tillatelse, terrenghøyde og 120-metersgrensen, vind og vindkast time for time, og soloppgang og solnedgang.</p>
-        <p data-lang="en">Which zones the point lies in, whether you need permission, terrain height and the 120 m ceiling, wind and gusts hour by hour, and sunrise and sunset.</p>
-      </div>
+      <p class="note" data-lang="nb">Klarering for å fly i en kontrollsone må fortsatt innhentes fra tårnet, og NOTAM sjekkes på ippc.no.</p>
+      <p class="note" data-lang="en">Clearance to fly in a control zone must still be obtained from the tower, and NOTAMs checked on ippc.no.</p>
     </div>
-    <p class="note" data-lang="nb">Klarering for å fly i en kontrollsone må fortsatt innhentes fra tårnet, og NOTAM sjekkes på ippc.no. Appen lenker deg videre.</p>
-    <p class="note" data-lang="en">Clearance to fly in a control zone must still be obtained from the tower, and NOTAMs checked on ippc.no. The app links you onward.</p>
   </section>
 
   <section id="soner">
-    <h2 data-lang="nb">Sonetypene</h2>
-    <h2 data-lang="en">The zone types</h2>
-    <p data-lang="nb">Samme farger som i appen. Soner som krever tillatelse har kraftigere omriss på kartet.</p>
-    <p data-lang="en">The same colours as in the app. Zones that require permission get a heavier outline on the map.</p>
-    <ul class="legend">
-      <li><span class="sw" style="background:var(--z-airport)"></span><div><strong data-lang="nb">Lufthavn, tillatelse kreves</strong><strong data-lang="en">Airport, permission required</strong><small data-lang="nb">Innenfor kontrollsonen til en lufthavn. Tårnet må godkjenne flygingen.</small><small data-lang="en">Inside an airport's control zone. The tower must approve the flight.</small></div></li>
-      <li><span class="sw" style="background:var(--z-restricted)"></span><div><strong data-lang="nb">Restriksjonsområde</strong><strong data-lang="en">Restricted area</strong><small data-lang="nb">Område med særskilt forbud, for eksempel Oslo sentrum eller ambassader.</small><small data-lang="en">Area with a specific ban, such as central Oslo or embassies.</small></div></li>
-      <li><span class="sw" style="background:var(--z-prison)"></span><div><strong data-lang="nb">Fengsel</strong><strong data-lang="en">Prison</strong><small data-lang="nb">Flyging krever tillatelse fra Kriminalomsorgen.</small><small data-lang="en">Flying requires permission from the Correctional Service.</small></div></li>
-      <li><span class="sw" style="background:var(--z-nature-ban)"></span><div><strong data-lang="nb">Verneområde med droneforbud</strong><strong data-lang="en">Protected area, drones banned</strong><small data-lang="nb">Dispensasjon må søkes hos forvaltningsmyndigheten.</small><small data-lang="en">Apply to the managing authority for an exemption.</small></div></li>
-      <li><span class="sw" style="background:var(--z-sensor)"></span><div><strong data-lang="nb">Sensorforbud (NSM)</strong><strong data-lang="en">Sensor ban (NSM)</strong><small data-lang="nb">Forbud mot kamera og andre sensorer fra luften.</small><small data-lang="en">Aerial cameras and other sensors are banned.</small></div></li>
-      <li><span class="sw" style="background:var(--z-airport-info)"></span><div><strong data-lang="nb">Lufthavn, vis hensyn</strong><strong data-lang="en">Airport, take care</strong><small data-lang="nb">Nær en lufthavn eller landingsplass. Vær oppmerksom på lufttrafikk.</small><small data-lang="en">Near an airport or landing site. Watch for air traffic.</small></div></li>
-      <li><span class="sw" style="background:var(--z-danger)"></span><div><strong data-lang="nb">Fareområde</strong><strong data-lang="en">Danger area</strong><small data-lang="nb">Skytefelt, helikopterplasser og annen aktivitet som kan være farlig for droner.</small><small data-lang="en">Firing ranges, helipads and other activity that can endanger drones.</small></div></li>
-      <li><span class="sw" style="background:var(--z-nature)"></span><div><strong data-lang="nb">Verneområde</strong><strong data-lang="en">Protected area</strong><small data-lang="nb">Vernet natur. Vis hensyn til dyrelivet, og sjekk verneforskriften.</small><small data-lang="en">Protected nature. Respect wildlife and check the protection rules.</small></div></li>
-    </ul>
+    <div class="wrap">
+      <h2 class="reveal" data-lang="nb">Sonetypene</h2>
+      <h2 class="reveal" data-lang="en">The zone types</h2>
+      <p class="reveal" data-lang="nb">Samme farger som i appen. Soner som krever tillatelse har kraftigere omriss på kartet.</p>
+      <p class="reveal" data-lang="en">The same colours as in the app. Zones that require permission get a heavier outline on the map.</p>
+      <ul class="legend">
+        <li><span class="sw" style="background:var(--z-airport)"></span><div><strong data-lang="nb">Lufthavn, tillatelse kreves</strong><strong data-lang="en">Airport, permission required</strong><small data-lang="nb">Innenfor kontrollsonen til en lufthavn. Tårnet må godkjenne flygingen.</small><small data-lang="en">Inside an airport's control zone. The tower must approve the flight.</small></div></li>
+        <li><span class="sw" style="background:var(--z-restricted)"></span><div><strong data-lang="nb">Restriksjonsområde</strong><strong data-lang="en">Restricted area</strong><small data-lang="nb">Område med særskilt forbud, for eksempel Oslo sentrum eller ambassader.</small><small data-lang="en">Area with a specific ban, such as central Oslo or embassies.</small></div></li>
+        <li><span class="sw" style="background:var(--z-prison)"></span><div><strong data-lang="nb">Fengsel</strong><strong data-lang="en">Prison</strong><small data-lang="nb">Flyging krever tillatelse fra Kriminalomsorgen.</small><small data-lang="en">Flying requires permission from the Correctional Service.</small></div></li>
+        <li><span class="sw" style="background:var(--z-nature-ban)"></span><div><strong data-lang="nb">Verneområde med droneforbud</strong><strong data-lang="en">Protected area, drones banned</strong><small data-lang="nb">Dispensasjon må søkes hos forvaltningsmyndigheten.</small><small data-lang="en">Apply to the managing authority for an exemption.</small></div></li>
+        <li><span class="sw" style="background:var(--z-sensor)"></span><div><strong data-lang="nb">Sensorforbud (NSM)</strong><strong data-lang="en">Sensor ban (NSM)</strong><small data-lang="nb">Forbud mot kamera og andre sensorer fra luften.</small><small data-lang="en">Aerial cameras and other sensors are banned.</small></div></li>
+        <li><span class="sw" style="background:var(--z-airport-info)"></span><div><strong data-lang="nb">Lufthavn, vis hensyn</strong><strong data-lang="en">Airport, take care</strong><small data-lang="nb">Nær en lufthavn eller landingsplass. Vær oppmerksom på lufttrafikk.</small><small data-lang="en">Near an airport or landing site. Watch for air traffic.</small></div></li>
+        <li><span class="sw" style="background:var(--z-danger)"></span><div><strong data-lang="nb">Fareområde</strong><strong data-lang="en">Danger area</strong><small data-lang="nb">Skytefelt, helikopterplasser og annen aktivitet som kan være farlig for droner.</small><small data-lang="en">Firing ranges, helipads and other activity that can endanger drones.</small></div></li>
+        <li><span class="sw" style="background:var(--z-nature)"></span><div><strong data-lang="nb">Verneområde</strong><strong data-lang="en">Protected area</strong><small data-lang="nb">Vernet natur. Vis hensyn til dyrelivet, og sjekk verneforskriften.</small><small data-lang="en">Protected nature. Respect wildlife and check the protection rules.</small></div></li>
+      </ul>
+    </div>
   </section>
 
-  <section id="data">
-    <h2 data-lang="nb">Dataene</h2>
-    <h2 data-lang="en">The data</h2>
-    <p data-lang="nb">Alt i appen kommer fra offentlige norske kilder. Sonene ligger innebygd og oppdateres med hver ny versjon, normalt månedlig.</p>
-    <p data-lang="en">Everything in the app comes from Norwegian public sources. Zones are bundled and refreshed with each release, normally monthly.</p>
-    <table class="data">
-      <thead><tr><th data-lang="nb">Innhold</th><th data-lang="en">Content</th><th data-lang="nb">Kilde</th><th data-lang="en">Source</th><th data-lang="nb">Vilkår</th><th data-lang="en">Terms</th></tr></thead>
-      <tbody>
-        <tr><td data-lang="nb">Dronesoner</td><td data-lang="en">Drone zones</td><td><a href="https://dronesoner.no/">dronesoner.no</a>, Luftfartstilsynet (ED-269)</td><td data-lang="nb">Offentlig nedlasting</td><td data-lang="en">Public download</td></tr>
-        <tr><td data-lang="nb">Kart, terreng, stedsnavn</td><td data-lang="en">Map, terrain, place names</td><td><a href="https://www.kartverket.no/">Kartverket</a></td><td>CC BY 4.0</td></tr>
-        <tr><td data-lang="nb">Vær og soltider</td><td data-lang="en">Weather and sun times</td><td><a href="https://www.met.no/">MET Norway</a></td><td>CC BY 4.0</td></tr>
-        <tr><td data-lang="nb">Kartmotor</td><td data-lang="en">Map engine</td><td><a href="https://maplibre.org/">MapLibre Native</a></td><td>BSD-2</td></tr>
-      </tbody>
-    </table>
+  <section class="band" id="data">
+    <div class="wrap">
+      <h2 class="reveal" data-lang="nb">Dataene</h2>
+      <h2 class="reveal" data-lang="en">The data</h2>
+      <p class="reveal" data-lang="nb">Alt i appen kommer fra offentlige norske kilder. Sonene ligger innebygd og oppdateres med hver ny versjon, normalt månedlig.</p>
+      <p class="reveal" data-lang="en">Everything in the app comes from Norwegian public sources. Zones are bundled and refreshed with each release, normally monthly.</p>
+      <table class="data">
+        <thead><tr><th data-lang="nb">Innhold</th><th data-lang="en">Content</th><th data-lang="nb">Kilde</th><th data-lang="en">Source</th><th data-lang="nb">Vilkår</th><th data-lang="en">Terms</th></tr></thead>
+        <tbody>
+          <tr><td data-lang="nb">Dronesoner</td><td data-lang="en">Drone zones</td><td><a href="https://dronesoner.no/">dronesoner.no</a>, Luftfartstilsynet (ED-269)</td><td data-lang="nb">Offentlig nedlasting</td><td data-lang="en">Public download</td></tr>
+          <tr><td data-lang="nb">Kart, terreng, stedsnavn</td><td data-lang="en">Map, terrain, place names</td><td><a href="https://www.kartverket.no/">Kartverket</a></td><td>CC BY 4.0</td></tr>
+          <tr><td data-lang="nb">Vær og soltider</td><td data-lang="en">Weather and sun times</td><td><a href="https://www.met.no/">MET Norway</a></td><td>CC BY 4.0</td></tr>
+          <tr><td data-lang="nb">Kartmotor</td><td data-lang="en">Map engine</td><td><a href="https://maplibre.org/">MapLibre Native</a></td><td>BSD-2</td></tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section id="faq">
-    <h2 data-lang="nb">Spørsmål</h2>
-    <h2 data-lang="en">Questions</h2>
-    <details>
-      <summary data-lang="nb">Hvor kommer sonene fra, og hvor ferske er de?</summary>
-      <summary data-lang="en">Where do the zones come from, and how fresh are they?</summary>
-      <p data-lang="nb">Fra Luftfartstilsynets offisielle ED-269-fil på dronesoner.no. Filen publiseres månedlig, og appen viser hvilken utgave den bruker under tegnforklaringen og nederst i hver vurdering. Midlertidige restriksjoner (NOTAM) er ikke med; dem sjekker du på ippc.no.</p>
-      <p data-lang="en">From the Civil Aviation Authority's official ED-269 file on dronesoner.no. It is published monthly, and the app shows which edition it uses in the legend and at the bottom of every verdict. Temporary restrictions (NOTAMs) are not included; check those on ippc.no.</p>
-    </details>
-    <details>
-      <summary data-lang="nb">Hvorfor mangler vær eller terrenghøyde?</summary>
-      <summary data-lang="en">Why is weather or terrain height missing?</summary>
-      <p data-lang="nb">De hentes fra Meteorologisk institutt og Kartverket i det du sjekker et punkt, og trenger nettforbindelse. Til havs og utenfor Norge finnes det ingen høydedata, og appen sier det.</p>
-      <p data-lang="en">They are fetched from MET Norway and Kartverket when you check a spot and need a connection. At sea and outside Norway there is no terrain data, and the app says so.</p>
-    </details>
-    <details>
-      <summary data-lang="nb">Hva brukes posisjonen min til?</summary>
-      <summary data-lang="en">What is my location used for?</summary>
-      <p data-lang="nb">Bare til å sentrere kartet der du er når du trykker på posisjonsknappen. Appen spør først da, og lagrer ingenting. Se <a href="privacy-policy">personvernerklæringen</a>.</p>
-      <p data-lang="en">Only to centre the map on you when you tap the location button. The app asks only then and stores nothing. See the <a href="privacy-policy">privacy policy</a>.</p>
-    </details>
-    <details>
-      <summary data-lang="nb">Fungerer appen utenfor Norge?</summary>
-      <summary data-lang="en">Does the app work outside Norway?</summary>
-      <p data-lang="nb">Nei. Kart, soner, terreng og vær finnes bare for Norge, Svalbard og Jan Mayen. Et punkt utenfor får svaret «utenfor dekningsområdet» i stedet for en vurdering.</p>
-      <p data-lang="en">No. Map, zones, terrain and weather exist only for Norway, Svalbard and Jan Mayen. A point outside gets "outside coverage" instead of a verdict.</p>
-    </details>
-    <details>
-      <summary data-lang="nb">Er Luftrom en offisiell tjeneste?</summary>
-      <summary data-lang="en">Is Luftrom an official service?</summary>
-      <p data-lang="nb">Nei. Luftrom er et planleggingsverktøy fra en uavhengig utvikler. Tillatelser innhentes fortsatt hos Avinor og andre myndigheter, og du er selv ansvarlig for flygingen.</p>
-      <p data-lang="en">No. Luftrom is a planning tool from an independent developer. Permissions are still obtained from Avinor and other authorities, and you remain responsible for the flight.</p>
-    </details>
+    <div class="wrap">
+      <h2 class="reveal" data-lang="nb">Spørsmål</h2>
+      <h2 class="reveal" data-lang="en">Questions</h2>
+      <div class="faq">
+        <details><summary data-lang="nb">Hvor kommer sonene fra, og hvor ferske er de?</summary><summary data-lang="en">Where do the zones come from, and how fresh are they?</summary><div class="faq-body">
+          <p data-lang="nb">Fra Luftfartstilsynets offisielle ED-269-fil på dronesoner.no. Filen publiseres månedlig, og appen viser hvilken utgave den bruker under tegnforklaringen og nederst i hver vurdering. Midlertidige restriksjoner (NOTAM) er ikke med; dem sjekker du på ippc.no.</p>
+          <p data-lang="en">From the Civil Aviation Authority's official ED-269 file on dronesoner.no. It is published monthly, and the app shows which edition it uses in the legend and at the bottom of every verdict. Temporary restrictions (NOTAMs) are not included; check those on ippc.no.</p></div></details>
+        <details><summary data-lang="nb">Hvorfor mangler vær eller terrenghøyde?</summary><summary data-lang="en">Why is weather or terrain height missing?</summary><div class="faq-body">
+          <p data-lang="nb">De hentes fra Meteorologisk institutt og Kartverket i det du sjekker et punkt, og trenger nettforbindelse. Til havs og utenfor Norge finnes det ingen høydedata, og appen sier det.</p>
+          <p data-lang="en">They are fetched from MET Norway and Kartverket when you check a spot and need a connection. At sea and outside Norway there is no terrain data, and the app says so.</p></div></details>
+        <details><summary data-lang="nb">Hva brukes posisjonen min til?</summary><summary data-lang="en">What is my location used for?</summary><div class="faq-body">
+          <p data-lang="nb">Bare til å sentrere kartet der du er når du trykker på posisjonsknappen. Appen spør først da, og lagrer ingenting. Se <a href="privacy-policy">personvernerklæringen</a>.</p>
+          <p data-lang="en">Only to centre the map on you when you tap the location button. The app asks only then and stores nothing. See the <a href="privacy-policy">privacy policy</a>.</p></div></details>
+        <details><summary data-lang="nb">Fungerer appen utenfor Norge?</summary><summary data-lang="en">Does the app work outside Norway?</summary><div class="faq-body">
+          <p data-lang="nb">Nei. Kart, soner, terreng og vær finnes bare for Norge, Svalbard og Jan Mayen. Et punkt utenfor får svaret «utenfor dekningsområdet» i stedet for en vurdering.</p>
+          <p data-lang="en">No. Map, zones, terrain and weather exist only for Norway, Svalbard and Jan Mayen. A point outside gets "outside coverage" instead of a verdict.</p></div></details>
+        <details><summary data-lang="nb">Er Luftrom en offisiell tjeneste?</summary><summary data-lang="en">Is Luftrom an official service?</summary><div class="faq-body">
+          <p data-lang="nb">Nei. Luftrom er et planleggingsverktøy fra en uavhengig utvikler. Tillatelser innhentes fortsatt hos Avinor og andre myndigheter, og du er selv ansvarlig for flygingen.</p>
+          <p data-lang="en">No. Luftrom is a planning tool from an independent developer. Permissions are still obtained from Avinor and other authorities, and you remain responsible for the flight.</p></div></details>
+      </div>
+    </div>
   </section>
 
-  <section id="kontakt" class="contact">
-    <div>
-      <h2 data-lang="nb">Kontakt</h2>
-      <h2 data-lang="en">Contact</h2>
-      <p data-lang="nb">Spørsmål, feil i appen eller forslag: send en e-post, så svarer vi så fort vi kan.</p>
-      <p data-lang="en">Questions, bugs or suggestions: send an email and we will answer as soon as we can.</p>
-      <a class="mail" href="mailto:lersveenk@gmail.com">lersveenk@gmail.com</a>
-    </div>
-    <div>
-      <h3 data-lang="nb">Feil i en sone?</h3>
-      <h3 data-lang="en">Wrong zone data?</h3>
-      <p data-lang="nb">Sonenes grenser og vilkår kommer uendret fra Luftfartstilsynet. Feil i selve sonen meldes til dem via dronesoner.no. Feil i hvordan appen viser den, meldes til oss.</p>
-      <p data-lang="en">Zone boundaries and conditions come unchanged from the Civil Aviation Authority. Report errors in the zone itself to them via dronesoner.no, and errors in how the app shows it to us.</p>
+  <section class="band" id="kontakt">
+    <div class="wrap">
+      <h2 class="reveal" data-lang="nb">Kontakt</h2>
+      <h2 class="reveal" data-lang="en">Contact</h2>
+      <div class="contact-grid">
+        <div>
+          <p data-lang="nb">Spørsmål, feil i appen eller forslag: send en e-post, så svarer vi så fort vi kan.</p>
+          <p data-lang="en">Questions, bugs or suggestions: send an email and we will answer as soon as we can.</p>
+          <a class="mail" href="mailto:lersveenk@gmail.com">lersveenk@gmail.com</a>
+        </div>
+        <div>
+          <h3 data-lang="nb">Feil i en sone?</h3><h3 data-lang="en">Wrong zone data?</h3>
+          <p data-lang="nb">Sonenes grenser og vilkår kommer uendret fra Luftfartstilsynet. Feil i selve sonen meldes til dem via dronesoner.no. Feil i hvordan appen viser den, meldes til oss.</p>
+          <p data-lang="en">Zone boundaries and conditions come unchanged from the Civil Aviation Authority. Report errors in the zone itself to them via dronesoner.no, and errors in how the app shows it to us.</p>
+        </div>
+      </div>
     </div>
   </section>
 </main>
