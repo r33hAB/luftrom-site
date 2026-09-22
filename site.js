@@ -23,13 +23,20 @@
 
   // Hero: play the check once on load; replay on demand.
   var hero = document.querySelector(".hero"), stage = document.querySelector(".stage");
+  function playStage() { stage.classList.remove("play"); void stage.offsetWidth; stage.classList.add("play"); }
   function play() {
     if (!hero) return;
-    hero.classList.remove("play"); stage.classList.remove("play");
-    void stage.offsetWidth;
-    hero.classList.add("play"); stage.classList.add("play");
+    hero.classList.remove("play"); void hero.offsetWidth; hero.classList.add("play");
+    playStage();
   }
-  if (hero && !reduce) { requestAnimationFrame(play); }
+  if (hero && !reduce) {
+    requestAnimationFrame(function () { hero.classList.add("play"); });
+    // On phones the stage sits below the copy, so the check plays when it comes into view, not before.
+    var seen = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { playStage(); seen.disconnect(); } });
+    }, { threshold: 0.45 });
+    seen.observe(stage);
+  }
   var replay = document.querySelector(".replay");
   if (replay) replay.addEventListener("click", play);
 
