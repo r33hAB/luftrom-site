@@ -1,0 +1,178 @@
+/* Luftrom site. Palette and shapes come from the app: the pale map background, the accent blue,
+   the restricted-zone magenta of the airspace ring over Oslo, and the eight zone colours. */
+:root {
+  --sky: #dfe7ee;
+  --sky-line: #c3d1dc;
+  --paper: #ffffff;
+  --ink: #14212b;
+  --muted: #56697a;
+  --accent: #1366c7;
+  --accent-ink: #0e4f9c;
+  --ring: #b0216e;
+  --z-airport: #d62929;
+  --z-restricted: #b0216e;
+  --z-prison: #8c3b3b;
+  --z-nature-ban: #29804f;
+  --z-sensor: #6b4d94;
+  --z-airport-info: #f2941f;
+  --z-danger: #e3bd33;
+  --z-nature: #7ab86b;
+  --radius-phone: 44px;
+  --measure: 62ch;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sky: #0f1922; --sky-line: #22323f; --paper: #172431; --ink: #e7eef4; --muted: #9db0c0;
+    --accent: #3e8dff; --accent-ink: #8ab9ff; --ring: #e04e9c;
+  }
+}
+:root[data-theme="dark"] {
+  --sky: #0f1922; --sky-line: #22323f; --paper: #172431; --ink: #e7eef4; --muted: #9db0c0;
+  --accent: #3e8dff; --accent-ink: #8ab9ff; --ring: #e04e9c;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--sky);
+  color: var(--ink);
+  font-family: "Barlow", ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+img { display: block; max-width: 100%; }
+h1, h2, h3 {
+  font-family: "Barlow Condensed", "Barlow", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+h1 { font-size: clamp(3rem, 7.5vw, 5.25rem); }
+h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); margin-bottom: 0.6rem; }
+h3 { font-size: 1.35rem; font-weight: 600; }
+p { margin: 0 0 1rem; max-width: var(--measure); }
+.lede { font-size: 1.25rem; line-height: 1.45; color: var(--ink); }
+
+/* Language toggle: Norwegian by default, English when <html data-lang="en">. */
+html:not([data-lang="en"]) [data-lang="en"] { display: none !important; }
+html[data-lang="en"] [data-lang="nb"] { display: none !important; }
+
+.wrap { width: min(1080px, 100% - 2rem); margin-inline: auto; }
+
+/* Header */
+.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1rem 0;
+}
+.brand { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--ink); }
+.brand img { width: 34px; height: 34px; border-radius: 9px; }
+.brand span { font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: 1.5rem; letter-spacing: 0.01em; }
+.top nav { display: flex; align-items: center; gap: 1.25rem; }
+.top nav a { font-weight: 500; text-decoration: none; }
+.top nav a:hover { text-decoration: underline; }
+.lang { display: inline-flex; border: 1px solid var(--sky-line); border-radius: 999px; padding: 2px; background: color-mix(in srgb, var(--paper) 60%, transparent); }
+.lang button {
+  font: inherit; font-weight: 600; font-size: 0.875rem; letter-spacing: 0.02em;
+  border: 0; background: transparent; color: var(--muted); padding: 0.3rem 0.7rem; border-radius: 999px; cursor: pointer;
+}
+.lang button[aria-pressed="true"] { background: var(--ink); color: var(--sky); }
+
+/* Hero */
+.hero {
+  display: grid; grid-template-columns: 1.05fr 0.95fr; align-items: center; gap: 2rem;
+  padding: 3rem 0 4rem;
+}
+.hero .copy p { max-width: 34rem; }
+.hero .lede { margin-top: 1.25rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; align-items: center; margin-top: 1.75rem; }
+.pill {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--accent); color: #fff; font-weight: 600; text-decoration: none;
+  padding: 0.8rem 1.25rem; border-radius: 999px;
+}
+.pill.soon { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+.pill svg { width: 18px; height: 18px; }
+.actions a:not(.pill) { font-weight: 500; }
+
+.stage { position: relative; display: grid; place-items: center; min-height: 520px; padding: 1.5rem 0; }
+.rings { position: absolute; inset: -2% -14%; width: 128%; height: 104%; pointer-events: none; }
+.rings circle { fill: none; stroke: var(--ring); }
+.phone {
+  position: relative; width: min(296px, 78vw);
+  border-radius: var(--radius-phone);
+  box-shadow: 0 30px 60px -20px rgba(20, 33, 43, 0.45), 0 0 0 1px rgba(20, 33, 43, 0.08);
+  background: #0b0f14;
+}
+.phone img { border-radius: var(--radius-phone); }
+
+/* Sections */
+section { padding: 3.25rem 0; border-top: 1px solid var(--sky-line); }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem 2rem; margin-top: 1.5rem; counter-reset: step; }
+.step { counter-increment: step; }
+.step::before {
+  content: counter(step);
+  display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%;
+  background: var(--ink); color: var(--sky); font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+.step p { margin-bottom: 0; color: var(--muted); }
+.note { color: var(--muted); font-size: 0.95rem; margin-top: 1.5rem; max-width: 60ch; }
+
+/* Zone legend: colour swatch carries the same meaning as in the app */
+.legend { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem; }
+.legend li { display: grid; grid-template-columns: 1.25rem 1fr; gap: 0.9rem; padding: 0.85rem 0; border-bottom: 1px solid var(--sky-line); align-items: start; }
+.legend .sw { width: 1.25rem; height: 1.25rem; border-radius: 6px; margin-top: 0.2rem; }
+.legend strong { display: block; font-weight: 600; }
+.legend small { color: var(--muted); font-size: 0.95rem; }
+
+/* Data table */
+.data { width: 100%; border-collapse: collapse; margin-top: 1.5rem; font-size: 1rem; }
+.data th, .data td { text-align: left; padding: 0.75rem 0.75rem 0.75rem 0; border-bottom: 1px solid var(--sky-line); vertical-align: top; }
+.data th { font-weight: 600; color: var(--muted); font-size: 0.9rem; }
+.data td:first-child { font-weight: 600; white-space: nowrap; }
+
+/* FAQ */
+details { border-bottom: 1px solid var(--sky-line); }
+summary { cursor: pointer; padding: 1rem 0; font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-family: "Barlow Condensed", sans-serif; font-size: 1.5rem; line-height: 1; color: var(--muted); }
+details[open] summary::after { content: "–"; }
+details p { color: var(--muted); }
+details :last-child { padding-bottom: 1rem; }
+
+/* Contact and footer */
+.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.contact .mail { font-family: "Barlow Condensed", sans-serif; font-size: clamp(1.6rem, 3vw, 2.25rem); font-weight: 600; text-decoration: none; }
+footer { padding: 2.5rem 0 3rem; border-top: 1px solid var(--sky-line); color: var(--muted); font-size: 0.95rem; }
+footer p { max-width: none; margin-bottom: 0.5rem; }
+
+/* Privacy page */
+.doc { padding: 2.5rem 0 3rem; }
+.doc header { margin-bottom: 2rem; }
+.doc header p { color: var(--muted); }
+.doc article { max-width: var(--measure); }
+.doc h2 { font-size: 1.6rem; margin: 2rem 0 0.5rem; }
+.doc ul { padding-left: 1.2rem; }
+.doc li { margin-bottom: 0.35rem; }
+.doc code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; background: color-mix(in srgb, var(--paper) 70%, transparent); padding: 0.05em 0.35em; border-radius: 4px; }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; padding: 2rem 0 3rem; }
+  .stage { min-height: 0; order: 2; margin-top: 1rem; }
+  .rings { inset: -4% -12%; width: 124%; }
+  .steps, .legend, .contact { grid-template-columns: 1fr; }
+  h1 { font-size: clamp(2.75rem, 12vw, 4rem); }
+}
+@media (max-width: 480px) {
+  .top nav a { display: none; }
+  .phone { width: min(280px, 80vw); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .lang button { transition: background-color 120ms ease, color 120ms ease; }
+}
